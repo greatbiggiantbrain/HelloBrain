@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B56625CE242CA23EA655DDFD /* Pods_HelloBrain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DB6C67EFA358A03A3A47508 /* Pods_HelloBrain.framework */; };
 		F79A3BA81FCB0C40003143C8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A3BA71FCB0C40003143C8 /* AppDelegate.swift */; };
 		F79A3BAA1FCB0C40003143C8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79A3BA91FCB0C40003143C8 /* ViewController.swift */; };
 		F79A3BAD1FCB0C40003143C8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F79A3BAB1FCB0C40003143C8 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3DB6C67EFA358A03A3A47508 /* Pods_HelloBrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloBrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		476E217D5C606A229ECA327E /* Pods-HelloBrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloBrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HelloBrain/Pods-HelloBrain.debug.xcconfig"; sourceTree = "<group>"; };
+		BE85E1AB5D4492CAA5C1CBCE /* Pods-HelloBrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloBrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-HelloBrain/Pods-HelloBrain.release.xcconfig"; sourceTree = "<group>"; };
 		F79A3BA41FCB0C40003143C8 /* HelloBrain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloBrain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F79A3BA71FCB0C40003143C8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F79A3BA91FCB0C40003143C8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B56625CE242CA23EA655DDFD /* Pods_HelloBrain.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		21EDCC2C1FA2982B6FA025F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3DB6C67EFA358A03A3A47508 /* Pods_HelloBrain.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51B935E6FC5956FDE2A1B994 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				476E217D5C606A229ECA327E /* Pods-HelloBrain.debug.xcconfig */,
+				BE85E1AB5D4492CAA5C1CBCE /* Pods-HelloBrain.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		F79A3B9B1FCB0C40003143C8 = {
 			isa = PBXGroup;
 			children = (
 				F79A3BA61FCB0C40003143C8 /* HelloBrain */,
 				F79A3BA51FCB0C40003143C8 /* Products */,
+				51B935E6FC5956FDE2A1B994 /* Pods */,
+				21EDCC2C1FA2982B6FA025F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F79A3BB61FCB0C40003143C8 /* Build configuration list for PBXNativeTarget "HelloBrain" */;
 			buildPhases = (
+				8B172B3974EA40606614A988 /* [CP] Check Pods Manifest.lock */,
 				F79A3BA01FCB0C40003143C8 /* Sources */,
 				F79A3BA11FCB0C40003143C8 /* Frameworks */,
 				F79A3BA21FCB0C40003143C8 /* Resources */,
+				BCD84528F5B0C3EDF1F16B1B /* [CP] Embed Pods Frameworks */,
+				1F130FC1F916EFE36078747C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1F130FC1F916EFE36078747C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloBrain/Pods-HelloBrain-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B172B3974EA40606614A988 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloBrain-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCD84528F5B0C3EDF1F16B1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-HelloBrain/Pods-HelloBrain-frameworks.sh",
+				"${PODS_ROOT}/AudioKit/iOS/AudioKit.framework",
+				"${PODS_ROOT}/AudioKit/iOS/AudioKitUI.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AudioKitUI.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HelloBrain/Pods-HelloBrain-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F79A3BA01FCB0C40003143C8 /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		F79A3BB71FCB0C40003143C8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476E217D5C606A229ECA327E /* Pods-HelloBrain.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +371,7 @@
 		};
 		F79A3BB81FCB0C40003143C8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BE85E1AB5D4492CAA5C1CBCE /* Pods-HelloBrain.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
